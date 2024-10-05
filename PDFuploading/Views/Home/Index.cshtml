@@ -1,0 +1,16 @@
+﻿@model FileUploadViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <form asp-action="UploadFile" method="post" enctype="multipart/form-data">
+        <div class="col d-flex align-items-end float-end">
+            <input type="file" asp-for="File" class="form-control">
+            <input type="submit" value="Upload PDF" class="rounded-pill btn btn-lg primary-color" />
+        </div>
+    </form>
+</div>
